@@ -1,0 +1,17 @@
+{
+  "name": "art-gallery",
+  "version": "1.0.0",
+  "description": "Best collection of Art",
+  "license": "ISC",
+  "author": "Rohit Agarwal",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  }
+}
