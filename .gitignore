@@ -1,35 +1,54 @@
-# Node modules
+# ======================
+# Node.js and Express
+# ======================
 node_modules/
-
-# Build / dist
-dist/
-build/
-
-# Environment variables
-.env
-.env.local
-
-# SQLite database
-*.db
-
-# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
 
-# OS files
+# ======================
+# Environment & Secrets
+# ======================
+.env
+.env.local
+.env.*.local
+
+# ======================
+# Database files
+# ======================
+*.db
+*.sqlite
+*.sqlite3
+
+# ======================
+# Logs and runtime files
+# ======================
+logs
+*.log
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# ======================
+# Build output
+# ======================
+dist/
+build/
+.cache/
+.tmp/
+
+# ======================
+# System files
+# ======================
 .DS_Store
 Thumbs.db
-
-# Editor settings
 .idea/
 .vscode/
 *.swp
 
-# Temporary files
-tmp/
-temp/
-
-# Coverage / test reports
+# ======================
+# Misc
+# ======================
 coverage/
+public/uploads/

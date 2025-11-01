@@ -2,6 +2,7 @@ import express from 'express'
 import { productsRouter } from './router/products.js'
 import { authRouter } from './router/auth.js'
 import { meRouter } from './router/me.js'
+import { cartRouter } from './router/cart.js'
 import session from 'express-session'
 
 const app = express()
@@ -28,6 +29,7 @@ app.use(express.static('public'))
 app.use('/api/products', productsRouter)
 app.use('/api/auth/me',meRouter)
 app.use('/api/auth',authRouter)
+app.use('/api/cart',cartRouter)
 
 app.listen(PORT , ()=> {
     console.log(`server connected on PORT ${PORT}`)
