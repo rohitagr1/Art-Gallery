@@ -25,7 +25,7 @@ export function addBtnListeners() {
 
 export async function updateCartIcon() {
   try {
-    const res = await fetch('/api/cart/cart-count')
+    const res = await fetch('/api/cart/cart-count', { credentials: 'include' })
     const obj = await res.json()
     const totalItems = obj.totalItems
 
@@ -55,6 +55,7 @@ async function fetchCartItems({ userMessage, checkoutBtn }) {
   const res = await fetch('/api/cart/', { credentials: 'include' })
 
   if (!res.ok) {
+    window.location.href = '/'
     checkoutBtn.disabled = true
     checkoutBtn.classList.add('disabled')
     userMessage.innerHTML = 'Please <a href="login.html">log in</a>.'
