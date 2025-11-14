@@ -2,7 +2,9 @@ import validator from 'validator'
 import { getDbConnection } from "../db/db.js"
 import bcrypt from 'bcryptjs'
 
+
 export async function registerUser(req,res){
+
 
     let { name , email , username, password } = req.body
 
@@ -66,6 +68,7 @@ catch(err){
 }
 
 export async function loginUser(req,res){
+    
 
     let { username , password} = req.body
 
