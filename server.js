@@ -3,15 +3,21 @@ import { productsRouter } from './router/products.js'
 import { authRouter } from './router/auth.js'
 import { meRouter } from './router/me.js'
 import { cartRouter } from './router/cart.js'
+import cors from 'cors'
 import session from 'express-session'
 
 const app = express()
 
 
-const PORT = 8000
-const secret = process.env.SPIRAL_SESSION_SECRET || 'ROHIT_AGARWAL'
+const PORT = process.env.PORT || 8000
+const secret = process.env.SESSION_SECRET || 'ROHIT_AGARWAL'
 
 app.use(express.json())
+
+app.use(cors({
+  origin: true,       
+  credentials: true
+}))
 
 app.use(session({
   secret: secret,
